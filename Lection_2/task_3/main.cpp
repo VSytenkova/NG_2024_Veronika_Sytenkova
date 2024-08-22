@@ -7,16 +7,16 @@ int main()
     int row[5];
     int maxValue = 0;
 
-    for (int i = 0; i < 5; i++) {
-        cout << "Enter amount in " << i+1 << " row: ";
-        cin >> row[i];
-        if (maxValue < row[i])
-            maxValue = row[i];
+    for (int rowNow = 0; rowNow < 5; rowNow++) {
+        cout << "Enter amount in " << rowNow+1 << " row: ";
+        cin >> row[rowNow];
+        if (maxValue < row[rowNow])
+            maxValue = row[rowNow];
     }
 
-    for(int i = 0; i < maxValue; i++) {
+    for(int rowNow = 0; rowNow < maxValue; rowNow++) {
         for (int y = 0; y < 5; y++) {
-            if (row[y] > i)
+            if (row[y] > rowNow)
                 cout << "*";
             else
                 cout << " ";
